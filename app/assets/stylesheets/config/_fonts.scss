@@ -1,0 +1,19 @@
+// Import Google fonts
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,700");
+
+// Define fonts for body and headers
+$body-font: "Work Sans", "Helvetica", "sans-serif";
+$headers-font: "League Spartan", "Helvetica", "sans-serif";
+
+@font-face {
+    font-family: 'League Spartan';
+    src: font-url('leaguespartan-bold.eot');
+    src: font-url('leaguespartan-bold.eot?#iefix') format('embedded-opentype'),
+         font-url('leaguespartan-bold.woff2') format('woff2'),
+         font-url('leaguespartan-bold.woff') format('woff'),
+         font-url('leaguespartan-bold.ttf') format('truetype'),
+         font-url('leaguespartan-bold.svg#league_spartanbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}

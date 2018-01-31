@@ -1,0 +1,25 @@
+// Import your layouts CSS files here.
+// Examples:
+// @import "dashboard";
+// @import "profile";
+// @import "map";
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: black;
+}
+
+.text-light {
+  color: gray;
+  font-size: 15px;
+  margin-top: 15px;
+}

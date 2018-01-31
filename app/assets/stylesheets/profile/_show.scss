@@ -1,0 +1,202 @@
+
+.profile-body{
+  background-color: white;
+}
+
+.profile-container{
+  font-family: $body-font;
+  font-weight: lighter;
+  display: grid;
+  margin: 80px 80px 0 30px;
+  min-height: 60vh;
+  padding-top: 30px;
+}
+
+.user-profile-info-box{
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+#profile-photo{
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  margin: 25px;
+}
+
+.user-profile-lessons{
+  margin-top: 25px;
+  margin-left: 17px;
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  margin-bottom: 45px;
+
+
+.teacher-skills{
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  margin-left: 15px;
+}
+
+
+ #profile-btn{
+    margin: 20px;
+  }
+
+  .no-lessons {
+    background-color: white;
+    border-radius: 7px;
+    padding: 50px;
+  }
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+
+  //-----------------------------TEACHER PAYMENTS -------------------------------
+
+  .teacher-payments {
+    background-color: white;
+    padding: 20px;
+    border-radius: 7px;
+  }
+
+  //-----------------------------REVIEWS -----------------------------------------
+
+#review-container{
+  // margin-top: 100px;
+  margin-left: 50px;
+  h5 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+
+.reviews-form {
+  margin-bottom: 70px;
+}
+
+
+.radio {
+  display: inline;
+  margin: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+// .stars {
+//   color: red;
+// }
+
+// input[type="radio"] {
+//  background: url("stars.png") repeat-x 0 0;
+//   width: 150px;
+//   margin: 0 auto;
+// }
+
+  //-----------------------------MEETUP CARDS -----------------------------------------
+
+#meetup-container {
+  margin-top: 100px;
+  p {
+    margin-bottom: 50px;
+  }
+}
+
+.meetup-cards-container {
+  display: grid;
+  grid-template-columns: 220px 220px 220px;
+  grid-template-rows: 220px 220px 220px;
+  grid-column-gap: 30px;
+  grid-row-gap: 150px;
+  margin-top: 40px;
+}
+
+.meetup-card {
+  background-size: cover !important;
+  background-position: center;
+  height: 100%;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+   p {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+  }
+}
+
+.meetup-events {
+  background-color: white;
+  color: black;
+  height: 100px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.font-grey {
+  color: gray;
+  font-size: 15px;
+}
+
+.hideContent {
+    overflow: hidden;
+    height: 500px;
+}
+
+.showContent {
+    height: auto;
+}
+
+.show-more {
+  display: flex;
+  background: linear-gradient(to bottom, rgba(white,0) 0%,rgba(white,1) 75%);
+  margin-top: -60px;
+  z-index: 10;
+  position: relative;
+  .btn {
+    margin: 40px 0 0;
+  }
+}
+
+.show-more-button {
+border-radius: 20px;
+}
+
+@media screen and (max-width: 780px){
+
+  .profile-container {
+    margin: 20px;
+    padding: 0px;
+  }
+
+  .user-profile-info-box {
+    grid-column: 1 / 2;
+    grid-row: 1 / span 1;
+  }
+
+  .teacher-skills {
+    grid-column: 1 / 2;
+    grid-row: 2 / span 1;
+    h4 {
+      text-align: center;
+    }
+  }
+
+  .user-profile-lessons {
+    grid-column: 1 / 2;
+    grid-row: 3 / span 1;
+  }
+
+  .meetup-container {
+    grid-column: 1 / 2;
+    grid-row: 4 / span 1;
+  }
+}
