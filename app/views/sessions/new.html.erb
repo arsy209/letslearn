@@ -1,0 +1,30 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-3 col-lg-6">
+
+      <div class="form-login">
+
+        <h2>Log in</h2>
+        <%= simple_form_for :session, url: sessions_path do |f| %>
+          <div class="form-inputs">
+            <%= f.input :email, required: false, autofocus: true, placeholder: "email" %>
+            <%= f.input :password, required: false, placeholder: "password" %>
+          </div>
+          <div class="form-actions">
+            <%= f.button :submit, "Log in", class: "btn btn-primary"  %>
+          </div>
+        <% end %>
+        <h4 class= "register-title"> Need to register?</h4>
+
+<%= image_tag('teacher.png', class: "skill-show-icon") %>
+  <%= link_to "Sign up to teach", new_user_path(resource_name, role: "teacher") %><br />
+
+  <%= image_tag('category.png', class: "skill-show-icon") %>
+  <%= link_to "Sign up as a learner", new_user_path(resource_name, role: "student") %><br />
+
+    </div>
+
+  </div>
+  </div>
+</div>
