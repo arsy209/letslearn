@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   resources :messages, only: [:index, :create, :show, :new]
   resources :profiles, only: :show
 resources :sessions
+resources :users
 end
