@@ -1,24 +1,6 @@
-# README
+# Lets Learn
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This website aims to connect students with teachers where a user can search locally around their area for a certain class they would like to attend. The teacher can then accept the lesson.
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+more details coming soon...
