@@ -3,8 +3,8 @@ class CreateMessages < ActiveRecord::Migration[5.1]
     create_table :messages do |t|
       t.text :message_text
       t.references :skill, foreign_key: true
-      
-      t.timestamps null
+
+      t.timestamps
     end
     add_reference :messages, :sender, references: :users, index: true
     add_foreign_key :messages, :users, column: :sender_id
