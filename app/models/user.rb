@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_secure_password
+  
   has_many :skills, foreign_key: :teacher_id
   has_many :lessons, foreign_key: :student_id
   has_many :reviews, foreign_key: :student_id

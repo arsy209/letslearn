@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'redis'
 gem 'omniauth-facebook'
+gem 'bcrypt', '~> 3.1.7'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
