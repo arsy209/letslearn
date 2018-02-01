@@ -15,7 +15,8 @@ gem 'figaro'
 gem 'redis'
 gem 'omniauth-facebook'
 gem 'bcrypt', '~> 3.1.7'
-
+gem 'paperclip', "~> 5.0.0"
+gem 'rmagick'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
@@ -23,7 +24,7 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'bootstrap-datepicker-rails'
 gem 'social-share-button'
-
+gem 'bootstrap_form'
 gem "geocoder"
 gem "gmaps4rails"
 gem 'carrierwave', '~> 0.11.2'
