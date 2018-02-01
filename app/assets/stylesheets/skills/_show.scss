@@ -23,10 +23,29 @@
 
 }
 
+
+
+
 .skill-show-container{
   grid-column: 2 / 4;
   grid-row: 1 / 2;
   margin: 20px;
+}
+
+@media screen and (max-width: 780px){
+  .skill-show-container{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-top: 420px;
+  }
+  .skill-show-page{
+    font-family: $body-font;
+    font-weight: lighter;
+    display: grid;
+    margin-top: 80px;
+    grid-template-columns: 250px 300px;
+    grid-template-rows: 50% 50%;
+  }
 }
 
 
@@ -81,6 +100,16 @@
 }
 
 
+@media screen and (max-width: 780px){
+  .skill-show-reviews {
+
+
+
+    h4 {
+      margin-bottom: 30px;
+    }
+  }
+}
 
 .average-rating {
   color:  $yellow;
