@@ -1,0 +1,83 @@
+
+<% content_for :meta_title, "#{@skill.name}"%>
+
+<div class="banner-wide img-responsive" style='background-image: url("https://source.unsplash.com/1600x900/?<%= @skill.name %>");'>
+</div>
+
+<div class="skill-show-page">
+  <div class="teacher-skill-show-container">
+
+    <% if logged_in? %>
+      <%= render 'lessons/lesson-booking-form' %>
+    <% else %>
+      <h5>Log in to book a lesson!</h5>
+      <%= link_to "Log in", new_user_session_path, class: "btn btn-default" %>
+    <% end %>
+  </div>
+
+  <div class="skill-show-container">
+
+      <h1><%= "Learn #{@skill.name} with #{@skill.teacher.first_name} " %></h1>
+
+      <div class="social-share">
+        <p> Share with a friend </p>
+         <%= social_share_button_tag("Check out this lesson on #{@skill.name} from #{@skill.teacher.first_name}") %>
+      </div>
+
+      <ul class="nav nav-tabs  teacher-details">
+        <li class="active"><a data-toggle="tab" href="#details">Details</a></li>
+        <li><a data-toggle="tab" href="#bio">Experience in <%= @skill.name %></a></li>
+        <li><a data-toggle="tab" href="#experience">About <%= @skill.teacher.first_name %></a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="details" class="tab-pane fade in tab-item active  ">
+
+            <table>
+              <tr>
+                <td>Average rating</td>
+                <td> <% "#{@skill.average_rating}".to_i.times do %>
+        <i class="fa fa-star" aria-hidden="true"></i>
+      <% end %></td>
+              </tr>
+            <tr>
+              <td><%= image_tag('price.png', class: "skill-show-icon") %></td>
+              <td> $ <%= @skill.price %>/hour</td>
+            </tr>
+            <tr>
+              <td><%= image_tag('calendar.png', class: "skill-show-icon") %></td>
+              <td>I'm available on <%= @skill.availability %></td>
+            </tr>
+          </table>
+
+        </div>
+        <div id="bio" class="tab-pane fade tab-item">
+           <%= @skill.description %>
+        </div>
+        <div id="experience" class="tab-pane fade tab-item">
+          <%= image_tag('quote.png', class: "skill-show-icon") %>
+
+           <p><%= @skill.teacher.bio %></p>
+        </div>
+      </div>
+       <%= link_to "Get in touch with #{@skill.teacher.first_name}", '#', class: "btn btn-default", id: "btn-space" %>
+
+       <%= render 'messages/new-message', target_user_id: @skill.teacher.id, lesson_id: nil %>
+
+  <% content_for(:after_js) do %>
+   <script>
+      $(document).ready(function() {
+        document.querySelector("#btn-space").addEventListener("click", (event) => {
+          event.preventDefault();
+          msg_div = $(".user-messages");
+          msg_div.toggleClass('hidden');
+          // msg_div.style.display = msg_div.style.display === 'none' ? 'block' : 'none';
+        });
+      });
+    </script>
+<% end %>
+<div class="skill-show-reviews">
+  <%= render 'skills-reviews', reviews: @reviews %>
+</div>
+  </div>
+
+</div>
