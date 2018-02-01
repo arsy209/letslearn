@@ -1,0 +1,74 @@
+<h4 class= "blue-heading down-heading">My Lessons</h4>
+<% if @lessons.empty? %>
+<%= link_to "No bookings yet, add more skills to your profile to find more students", new_skill_path%>
+<% else %>
+  <ul class="nav nav-tabs">
+    <li><a data-toggle="tab" href="#pending">Requested Lessons</a></li>
+    <li><a data-toggle="tab" href="#confirmed">Upcoming</a></li>
+    <li><a data-toggle="tab" href="#completed">Completed</a></li>
+  </ul>
+
+<div class="tab-content">
+  <div id="pending" class="tab-pane fade in active">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active no-border" id="status-lesson">
+          <div class="card-container-lesson">
+            <% @lessons.each do |lesson|%>
+              <% if lesson.status == "pending"%>
+                <div class="lesson-card-profile">
+                  <%= image_tag small_user_photo(lesson.student), class: "student-photo"%>
+                  <%= link_to "Click to Message: #{lesson.student.name}", '#', class: " btn-msg", data: { lesson_id: lesson.id } %>
+                  <p><%= link_to "Lesson: #{lesson.name}", skill_path(lesson.skill)%></p>
+                  <p><%= "Date: #{lesson.date}" %></p>
+                  <div class="lesson-pending"><p><%= lesson.status %></p></div>
+                  <%= link_to "Confirm", lesson_path(lesson, status: "confirmed"), method: :patch, class: "btn btn-primary", id: "confirm-btn" %>
+                </div>
+                  <%= render 'messages/new-message', target_user_id: lesson.student.id, lesson_id: lesson.id %>
+              <% end %>
+            <% end %>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div id="confirmed" class="tab-pane fade in tab-item">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active no-border" id="status-lesson">
+          <div class="card-container-lesson">
+            <% @lessons.each do |lesson|%>
+              <% if lesson.status == "confirmed"%>
+                <div class="lesson-card-profile" >
+                    <%= image_tag small_user_photo(lesson.student), class: "student-photo"%>
+                    <%= link_to "Click to Message: #{lesson.student.name}", '#', class: " btn-msg", data: { lesson_id: lesson.id } %>
+                    <p><%= link_to "Lesson: #{lesson.name}", skill_path(lesson.skill)%></p>
+                    <p><%= "Date: #{lesson.date}" %></p>
+                  <div class="lesson-confirmed"><p><%= lesson.status %></p></div>
+                    <%= link_to "Mark as completed", lesson_path(lesson, status: "completed"), method: :patch, class: "btn btn-primary", id: "confirm-btn" %>
+                  </div>
+                  <%= render 'messages/new-message', target_user_id: lesson.student.id, lesson_id: lesson.id %>
+              <% end %>
+            <% end %>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div id="completed" class="tab-pane fade in tab-item">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active no-border" id="status-lesson">
+          <div class="card-container-lesson">
+          <% @lessons.each do |lesson|%>
+            <% if lesson.status == "completed"%>
+                <div class="lesson-card-profile" >
+                  <%= image_tag small_user_photo(lesson.student), class: "student-photo"%>
+                  <%= link_to "Click to Message: #{lesson.student.name}", '#', class: " btn-msg", data: { lesson_id: lesson.id } %>
+                  <p><%= link_to "Lesson: #{lesson.name}", skill_path(lesson.skill)%></p>
+                  <p><%= "Date: #{lesson.date}" %></p>
+                </div>
+                <%= render 'messages/new-message', target_user_id: lesson.student.id, lesson_id: lesson.id %>
+                <% end %>
+              <% end %>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
