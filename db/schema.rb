@@ -24,11 +24,13 @@ ActiveRecord::Schema.define(version: 20180131220604) do
     t.boolean "paid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "student_id"
     t.date "date"
     t.string "status"
     t.integer "price_cents", default: 0, null: false
     t.string "charge_id"
     t.index ["skill_id"], name: "index_lessons_on_skill_id"
+    t.index ["student_id"], name: "index_lessons_on_student_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -90,6 +92,7 @@ ActiveRecord::Schema.define(version: 20180131220604) do
   end
 
   add_foreign_key "lessons", "skills"
+  add_foreign_key "lessons", "users", column: "student_id"
   add_foreign_key "messages", "skills"
   add_foreign_key "messages", "users", column: "receiver_id"
   add_foreign_key "messages", "users", column: "sender_id"

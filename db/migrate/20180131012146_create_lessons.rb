@@ -10,5 +10,7 @@ class CreateLessons < ActiveRecord::Migration[5.1]
 
       t.timestamps null: false
     end
+    add_reference :lessons, :student, references: :users, index: true
+    add_foreign_key :lessons, :users, column: :student_id
   end
 end
