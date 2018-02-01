@@ -1,0 +1,82 @@
+
+<% content_for :meta_title, "My Profile" %>
+<div class="profile-body">
+<div class="profile-container">
+  <div class="user-profile-info-box">
+    <h3 class="text-center"><%= @user.name%></h3>
+      <%= image_tag @user.avatar.url%>
+    <% if @user.bio == "" %>
+    <p>No bio yet, tell us about yourself!</p>
+    <% else %>
+    <p><%= @user.bio %></p>
+    <% end %>
+
+    <% if current_user.role == "teacher" %>
+        <div class="teacher-payments">
+        <h4>Total payments</h4>
+          <% if @total_price.nil? %>
+             <p> No payments yet :( Promote your lessons to encourage a booking! </p>
+          <% else %>
+            <%= image_tag('price.png', class: "skill-show-icon") %>
+             $ <%= @total_price %>
+           <% end %>
+        </div>
+    <% end %>
+
+     <% if current_user.role == "teacher" %>
+    <%= link_to "Add A New Skill", new_skill_path, class: "btn btn-primary", id: "profile-btn"%>
+    <% end %>
+
+
+  </div>
+
+  <div class="user-profile-lessons">
+
+    <% if current_user.role == "teacher" %>
+    <%= render 'teacher_lessons' %>
+    <% else %>
+    <%= render 'student_lessons' %>
+    <% end %>
+  </div>
+
+  <div class="teacher-skills">
+    <% if current_user.role == "teacher" %>
+    <%= render 'teacher_skills' %>
+    <% else %>
+      <%if @unique_skills.any? %>
+        <%= render 'student_skills' %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+</div>
+    <% content_for(:after_js) do %>
+   <script>
+      $(document).ready(function() {
+        document.querySelectorAll(".btn-msg").forEach((button) => {
+          button.addEventListener("click", (event) => {
+            event.preventDefault();
+            msg_div = $("#message-for-lesson-" + event.target.getAttribute('data-lesson-id'));
+            msg_div.toggleClass('hidden');
+          // msg_div.style.display = msg_div.style.display === 'none' ? 'block' : 'none';
+          });
+        });
+      });
+
+    $(".show-more a").on("click", (event) => {
+      event.preventDefault()
+      var $this = $(event.target);
+      var meetup_div = $(".meetup-cards-container");
+      var linkText = $this.text();
+
+      if(linkText === "Show more"){
+          linkText = "Show less";
+          meetup_div.removeClass("hideContent").addClass("showContent")
+      } else {
+          linkText = "Show more";
+          meetup_div.removeClass("showContent").addClass("hideContent")
+      }
+      $this.text(linkText);
+    });
+    </script>
+    <% end %>
