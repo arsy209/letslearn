@@ -1,0 +1,76 @@
+<div class="banner">
+  <div class="banner-left">
+    <h1 id="change-text" class="fadeIn" >Lets Learn</h1>
+  </div>
+  <div class="banner-right">
+    <h3>Have the Ability to reach out to your community and learn together.</h3>
+    <%= link_to "Find a local teacher today", skills_path, class: "hp-button btn btn-success" %>
+  </div>
+</div>
+
+<% content_for(:after_js) do %>
+  <script>
+  const text = [ "New Skills", "Improve Old Skills"];
+  let counter = 0;
+  const elem = document.getElementById("change-text");
+  let intervalId = setInterval(change, 2000);
+  function change() {
+    elem.classList.remove('fadeIn');
+    elem.classList.add('fadeOut');
+    setTimeout(function () {
+      elem.innerHTML = text[counter];
+       elem.classList.remove('fadeOut');
+      elem.classList.add('fadeIn');
+      counter++;
+      if (counter >= text.length) {
+        counter = 0;
+        clearInterval(intervalId);
+       }
+      }, 500);
+    }
+  </script>
+<% end %>
+
+<div class="wrapper-green">
+  <div class="container">
+    <div class="row text-center">
+      <h2 class="text-center feature-heading">How does it work?</h2>
+      <div class="col-sm-12 col-lg-4">
+          <div class="feature-content">
+            <p class="feature-title">Search</p>
+            <%= image_tag("search.png" , :class => "feature-icon") %>
+            <p class="image-label">Find Local Tutors/Teachers in your Community</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+          <div class="feature-content">
+            <p class="feature-title">Match</p>
+            <%= image_tag("neighbours.png" , :class => "feature-icon") %>
+            <p class="image-label">View each profile to find your perfect match.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+           <div class="feature-content">
+            <p class="feature-title">Meet</p>
+            <%= image_tag("message.png" , :class => "feature-icon") %>
+            <p class="image-label">Message and meet in person to Learn.</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper-white">
+  <div class="container">
+    <div class="row">
+      <div class="social-proof">
+        <div class="col-sm-12 col-lg-6">
+
+        </div>
+         <div class="customer-text col-sm-12 col-lg-6">
+
+
+        </div>
+      </div>
+    </div>
+ </div>
+</div>
