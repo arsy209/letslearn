@@ -1,0 +1,17 @@
+
+<div class="map-preview">
+  <div class="preview-left">
+    <%= image_tag teacher_photo(skill), class: "student-photo"  %>
+    <p><strong><%= skill.category %></strong></p>
+    <p class="font-small">$<%= skill.price %>/hour</p>
+    <% "#{skill.average_rating}".to_i.times do %>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <% end %>
+  </div>
+  <div class="preview-right">
+    <p> Hi I'm <%= skill.teacher.first_name.capitalize %></p>
+    <p> I teach <%= skill.name %></p>
+    <p class="font-small"><%= skill.teacher.bio %></p>
+    <%= link_to "Learn with me",skill_path(skill), class: "btn btn-primary"  %>
+  </div>
+</div>
