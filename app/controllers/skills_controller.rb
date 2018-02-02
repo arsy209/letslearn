@@ -14,6 +14,7 @@ class SkillsController < ApplicationController
   def show
     @message = Message.new
     @reviews =  @skill.reviews
+      @review = Review.new
   end
 
   def new
