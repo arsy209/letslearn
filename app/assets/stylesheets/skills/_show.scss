@@ -91,8 +91,7 @@
 // ---------------------------REVIEWS ---------------------
 .skill-show-reviews {
   background-color: white;
-  margin: 20px;
-  padding: 20px;
+
 
   h4 {
     margin-bottom: 30px;
@@ -102,7 +101,7 @@
 
 @media screen and (max-width: 780px){
   .skill-show-reviews {
-
+    margin-right: -50px;
 
 
     h4 {
@@ -117,7 +116,7 @@
 
 
 .individual-review {
-  padding: 20px;
+  // padding: 20px;
 
   li {
     list-style: none;
@@ -138,5 +137,5 @@
 }
 
 .review-inline {
-  display: flex;
+
 }
