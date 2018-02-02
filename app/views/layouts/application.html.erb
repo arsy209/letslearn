@@ -16,13 +16,8 @@
     <div class="page-wrap">
     <%= render 'layouts/navbar' %>
     <%= render 'layouts/flashes' %>
-      <%= yield %>
-    </div>
-    <%= render 'layouts/footer' %>
-
-
-    <%= javascript_include_tag "application" %>
-
     <%= yield(:after_js) %>
+    <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
