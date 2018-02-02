@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_secure_password
 
   has_attached_file :avatar, default_url: "/images/:style/missing.png"
-validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
   has_many :skills, foreign_key: :teacher_id
   has_many :lessons, foreign_key: :student_id
@@ -13,6 +13,7 @@ validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
   validates :email, :first_name, :last_name, presence: true
   after_create :set_picture_if_nil
   # mount_uploader :photo, PhotoUploader
+
 
   def name
   "#{self.first_name.capitalize} #{self.last_name.capitalize}"
