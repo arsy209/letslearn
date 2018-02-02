@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -7,8 +7,8 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key="#{ENV['GOOGLE_API_BROWSER_KEY']}"&callback=initMap"
-    type="text/javascript"></script>
+
+    <%= javascript_include_tag "https://maps.google.com/maps/api/js?key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
     <%= javascript_include_tag "https://cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/markerclusterer/src/markerclusterer_compiled.js" %>
     <%= javascript_include_tag "https://cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js" %>
   </head>
@@ -16,8 +16,13 @@
     <div class="page-wrap">
     <%= render 'layouts/navbar' %>
     <%= render 'layouts/flashes' %>
-    <%= yield(:after_js) %>
+      <%= yield %>
+
     <%= render 'layouts/footer' %>
     </div>
+
+    <%= javascript_include_tag "application" %>
+
+    <%= yield(:after_js) %>
   </body>
 </html>
