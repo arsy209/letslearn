@@ -1,8 +1,5 @@
-
 <div class="lesson-form">
-
   <h5>Book a lesson</h5>
-
   <form action="<%= lessons_path %>" method="post">
     <div class="form-group">
       <div class='input-group date' id="margin-bottom">
@@ -25,13 +22,10 @@
         data-description="<%= @skill.name%> for <%= current_user.email %>"
         data-amount="<%= @skill.price_cents %>"
         data-currency="<%= @skill.price.currency %>"></script>
-
   </form>
 </div>
-
 <%= content_for(:after_js) do %>
   <script>
-
     $('#lesson-date').datepicker().on('changeDate', function(ev) {
       setTimeout(function(){ $('.datepicker').hide(); }, 100);
     });
