@@ -1,9 +1,5 @@
-<% content_for :meta_title, "My Messages | LEALO" %>
-
 <div class="messages-container">
   <h1 class="text-center">My Messages</h1>
-
-
   <% @grouped_messages.each do |user_id, array| %>
     <% user = User.find(user_id) %>
     <div class="user-messages">
@@ -31,10 +27,8 @@
  <% end %>
 <%= link_to 'New Message', new_message_path, class: "btn btn-primary message-button" %>
 </div>
-
 <% content_for(:after_js) do %>
   <script>
-
   document.querySelectorAll(".user-messages").forEach((user_div)=> {
     user_div.addEventListener("click", (event) => {
       msg_div = event.currentTarget.querySelector(".messages-div")
