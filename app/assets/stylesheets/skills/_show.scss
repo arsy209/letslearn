@@ -36,7 +36,11 @@
   .skill-show-container{
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    margin-top: 520px;
+    margin-top: 620px;
+
+    h1 {
+      font-size: 30px;
+    }
   }
   .skill-show-page{
     font-family: $body-font;
