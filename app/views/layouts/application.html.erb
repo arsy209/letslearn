@@ -13,16 +13,14 @@
     <%= javascript_include_tag "https://cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js" %>
   </head>
   <body>
+
     <div class="page-wrap">
     <%= render 'layouts/navbar' %>
     <%= render 'layouts/flashes' %>
       <%= yield %>
-
     <%= render 'layouts/footer' %>
     </div>
-
     <%= javascript_include_tag "application" %>
-
     <%= yield(:after_js) %>
   </body>
 </html>
