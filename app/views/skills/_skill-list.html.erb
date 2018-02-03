@@ -13,7 +13,7 @@
         <p> Hi I'm <%= skill.teacher.first_name.capitalize %></p>
         <p> I teach <%= skill.name %></p>
         <p class="font-small"><%= skill.teacher.bio %></p>
-        <%= link_to "Learn with me",skill_path(skill), class: "btn btn-primary"  %>
+        <%= link_to "View Profile",skill_path(skill), class: "btn btn-primary"  %>
       </div>
       <div class="card-location">
         <%= image_tag('map.png',class: "map-icon") %>
