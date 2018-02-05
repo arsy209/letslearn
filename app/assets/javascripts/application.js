@@ -4,5 +4,8 @@
 //= require bootstrap-datepicker
 //= require underscore
 //= require gmaps/google
+//= require react
+//= require react_ujs
+//= require components
 //= require_tree .
 //= require social-share-button
