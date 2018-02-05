@@ -31,34 +31,9 @@
   </script>
 <% end %>
 
-<div class="wrapper-green">
-  <div class="container">
-    <div class="row text-center">
-      <h2 class="text-center feature-heading">How Does Lets-Learn Work?</h2>
-      <div class="col-sm-12 col-lg-4">
-          <div class="feature-content">
-            <p class="feature-title">Search</p>
-            <%= image_tag("searching.png" , :class => "feature-icon") %>
-            <p class="image-label">Find Local Tutors/Teachers in your Community</p>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-4">
-          <div class="feature-content">
-            <p class="feature-title">Match</p>
-            <%= image_tag("neighbours.png" , :class => "feature-icon") %>
-            <p class="image-label">View each profile to find your perfect match.</p>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-4">
-           <div class="feature-content">
-            <p class="feature-title">Meet</p>
-            <%= image_tag("message.png" , :class => "feature-icon") %>
-            <p class="image-label">Message and meet in person to Learn.</p>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
+
+<%= react_component(('LearnMore'), {prerender: true}) %>
+
 <div class="wrapper-white">
   <div class="container">
     <div class="row">
