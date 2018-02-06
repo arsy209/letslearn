@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "home#home"
+  get "/about_us", to: "home#about_us"
   # root "home#under_construction"
   resources :sessions
   resources :users
-  
+
   resources :skills do
     post 'lesson_sms',to: 'notifications#notify_lesson_request'
     resources :reviews, only: :create
