@@ -2,7 +2,7 @@
 <div class="reviews-form user-messages new-message ">
   <h5>Leave a review for <%= @skill.teacher.first_name %></h5>
   <%= simple_form_for([ @skill, @review ]) do |form| %>
-    <%= form.input :comment, as: :text %>
+    <%= form.input :comment, as: :text,:input_html => {:rows => 10,:style =>"resize:none"} %>
     <%= form.input :rating, input_html: { id: 'input-id',  class: 'rating',  'data-size' => 'xs', 'data-show-clear' => 'false', 'data-show-caption'=>'false' }%>
     <%= form.button :submit %>
   <% end %>
