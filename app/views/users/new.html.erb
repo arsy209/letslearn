@@ -3,15 +3,15 @@
     <div class="col-xs-12 col-sm-4 col-sm-offset-3 col-lg-6">
       <div class="form-login">
         <div class="user-header">
-          <h2>Sign Up</h2>
+          <h2>Register</h2>
         </div>
           <div class="new-user-form">
             <%= simple_form_for @user do |f| %>
             <div class="form-inputs">
-              <%= f.input :first_name, required: false%>
-              <%= f.input :last_name, required: false %>
+              <%= f.input :first_name, required: true%>
+              <%= f.input :last_name, required: true %>
               <%= f.input :email, required: true, autofocus: true %>
-              <%= f.input :bio %>
+              <%= f.input :bio ,:input_html => {:rows => 6,:style =>"resize:none"}%>
               <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
               <%= f.input :avatar, as: :file %>
               <%= f.input :role, as: :hidden, input_html: { value: params[:role] } %>
@@ -24,4 +24,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
