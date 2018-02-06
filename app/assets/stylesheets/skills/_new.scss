@@ -3,15 +3,18 @@
     width: 480px;
     padding: 10px;
   h2{
-    font-size: 23px;
+    font-size: 20px;
     font-family: $headers-font;
     font-weight: lighter;
+  }
+  h1 {
+    font-size: 40px;
   }
 }
 
 .new-skill-container{
   width: 450px;
-  padding-bottom: 20px;
+  padding-bottom: 120px;
   margin: 0 auto;
 
 
@@ -66,5 +69,3 @@
 
   }
 }
-
-
