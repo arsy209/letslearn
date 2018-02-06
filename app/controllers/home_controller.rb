@@ -5,4 +5,7 @@ class HomeController < ApplicationController
 
   def under_construction
   end
+
+  def about_us
+  end
 end
