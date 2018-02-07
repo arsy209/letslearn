@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root "home#home"
   get "/about_us", to: "home#about_us"
-  # root "home#under_construction"
   resources :sessions
   resources :users
 
