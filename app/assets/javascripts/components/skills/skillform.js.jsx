@@ -1,7 +1,4 @@
-
-
-// app/assets/javascripts/components/_post_form.jsx
-class PostForm extends React.Component {
+class SkillForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -46,58 +43,24 @@ class PostForm extends React.Component {
 
   render() {
     return (
-  <div className="new-skill-form-inputs">
+      <div className="new-skill-form-inputs">
         <label>Name</label>
-        <input
-          type="text"
-          name="skill[name]"
-          value={this.state.name}
-          onChange={this.handleNameChange}
-        />
+        <input type="text" name="skill[name]" value={this.state.name} onChange={this.handleNameChange}/>
 
         <label>Price</label>
-        <input
-          className="new-skill-form-inputs"
-          type="text"
-          name="skill[price]"
-          value={this.state.price}
-          onChange={this.handlePriceChange}
-        />
+        <input type="text" name="skill[price]" value={this.state.price} onChange={this.handlePriceChange}/>
 
         <label>Description</label>
-        <input
-          type="text"
-          name="skill[description]"
-          value={this.state.description}
-          onChange={this.handleDescriptionChange}
-        />
-
+        <input type="text" name="skill[description]" value={this.state.description} onChange={this.handleDescriptionChange}/>
 
         <label>Location</label>
-        <input
-          type="text"
-          name="skill[location]"
-          value={this.state.location}
-          onChange={this.handleLocationChange}
-        />
-
+        <input type="text" name="skill[location]" value={this.state.location} onChange={this.handleLocationChange}/>
 
         <label>Availability</label>
-        <input
-          type="text"
-          name="skill[availability]"
-          value={this.state.availability}
-          onChange={this.handleAvailabilityChange}
-        />
-
+        <input type="text" name="skill[availability]" value={this.state.availability} onChange={this.handleAvailabilityChange}/>
 
         <label>category</label>
-        <input
-          type="text"
-          name="skill[category]"
-          value={this.state.category}
-          onChange={this.handleCategoryChange}
-        />
+        <input type="text" name="skill[category]" value={this.state.category} onChange={this.handleCategoryChange}/>
 
         <input type="submit" value="create skill" />
       </div>
