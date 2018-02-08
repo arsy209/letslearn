@@ -2,10 +2,7 @@
 
  Lets Learn aims to connect students with teachers locally and around the world. A student can search for different teachers that signed up with the website for the different skills/lessons that they teach.
 
-
-
  ## As a Student
-
  1. Register as a student
  2. Search the database for different Teachers around the world or locally
  3. Students can also register to teach different lessons if they want too
@@ -15,14 +12,11 @@
 
 
  ## As a Teacher
-
  1. Register as a teacher
  2. Can create new lessons/skills to teach
  3. Teachers can also set the days they are free to teach whether it be local or over the computer
  4. Can see what students chose their lessons and accept or deny them
  5. Message students with any type of information
 
-
-# Website Link
-<!-- [Click Me](https://letslearnn.herokuapp.com/) -->
+## Website Link
 Coming Soon..
