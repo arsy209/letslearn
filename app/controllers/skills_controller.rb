@@ -14,7 +14,7 @@ class SkillsController < ApplicationController
   def show
     @message = Message.new
     @reviews =  @skill.reviews
-      @review = Review.new
+    @review = Review.new
   end
 
   def new
@@ -60,12 +60,12 @@ class SkillsController < ApplicationController
 
   private
 
-    def set_skill
-      @skill = Skill.find(params[:id])
-    end
+  def set_skill
+    @skill = Skill.find(params[:id])
+  end
 
 
-    def skill_params
-      params.require(:skill).permit(:name, :price, :description, :teacher_id, :location, :availability, :category, :skill_rating)
-    end
+  def skill_params
+    params.require(:skill).permit(:name, :price, :description, :teacher_id, :location, :availability, :category, :skill_rating)
+  end
 end

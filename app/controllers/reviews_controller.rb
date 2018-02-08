@@ -17,7 +17,6 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.skill_id = params[:skill_id]
     @review.student_id = current_user.id
-
     if @review.save
       redirect_to profile_path(current_user), notice: 'Review successfully submitted'
 
@@ -25,7 +24,6 @@ class ReviewsController < ApplicationController
       render 'profiles/show', id: current_user.id
     end
   end
-
 
   private
 
