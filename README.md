@@ -2,6 +2,8 @@
 
  Lets Learn aims to connect students with teachers locally and around the world. A student can search for different teachers that signed up with the website for the different skills/lessons that they teach.
 
+ -----------------------------------------
+
  ## As a Student
  1. Register as a student
  2. Search the database for different Teachers around the world or locally
@@ -18,5 +20,20 @@
  4. Can see what students chose their lessons and accept or deny them
  5. Message students with any type of information
 
+
 ## Website Link
 Coming Soon..
+
+
+## Future Updates
+Coming Soon..
+
+## Technologies Used
+
+1. Ruby
+2. Rails
+3. Javascript
+4. React
+5. Bootstrap
+
+6. more to be updated soon....
