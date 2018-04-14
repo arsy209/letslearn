@@ -12,7 +12,7 @@
  5. Students can leave reviews out of 5 stars to rate the Teacher on how they taught.
  6. Message Teacher with any type of question.
 
-
+ -----------------------------------------
  ## As a Teacher
  1. Register as a teacher
  2. Can create new lessons/skills to teach
@@ -20,20 +20,13 @@
  4. Can see what students chose their lessons and accept or deny them
  5. Message students with any type of information
 
-
+ -----------------------------------------
 ## Website Link
 Coming Soon..
-
+ -----------------------------------------
 
 ## Future Updates
 Coming Soon..
-
+ -----------------------------------------
 ## Technologies Used
-
-1. Ruby
-2. Rails
-3. Javascript
-4. React
-5. Bootstrap
-
-6. more to be updated soon....
+Coming Soon..
