@@ -22,11 +22,13 @@
 
  -----------------------------------------
 ## Website Link
-Coming Soon..
  -----------------------------------------
+Coming Soon..
+
 
 ## Future Updates
-Coming Soon..
  -----------------------------------------
+Coming Soon..
+
 ## Technologies Used
 Coming Soon..
