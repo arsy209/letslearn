@@ -1,5 +1,5 @@
 # Lets Learn
-
+ -----------------------------------------
  Lets Learn aims to connect students with teachers locally and around the world. A student can search for different teachers that signed up with the website for the different skills/lessons that they teach.
 
  -----------------------------------------
